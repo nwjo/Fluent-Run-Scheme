@@ -1,9 +1,11 @@
 /file/set-tui-version "22.1"
 
-/file/read-case-data/"E:/Ecoset_CWDS_MP/3. Analysis/CWDS_MP_Reactor_woBaffle_InOut_OneBody_40C.cas.h5" o
-/file/write-case-data/"E:/Ecoset_CWDS_MP/3. Analysis/CWDS_MP_Reactor_woBaffle_InOut_OneBody_40C_Tr_insul.cas.h5" o
+/file/read-case/"D:/UT_IMJ/tower_6m_0.6in/tower_5m_03in.msh" o
+/file/write-case-data/"D:/UT_IMJ/tower_6m_0.6in/tower_5m_03in.cas.h5" o
 
-/define/boundary-conditions/mass-flow-inlet inlet yes yes no 1e-05 no "VolumeAve(StaticTemperature,['reactor-body'])" no 0 no yes no no yes 5 10 
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+
+yes yes no 1e-05 no "VolumeAve(StaticTemperature,['reactor-body'])" no 0 no yes no no yes 5 10 
 /define/boundary-conditions/pressure-outlet outlet yes no 0 no "VolumeAve(StaticTemperature,['reactor-body'])" no yes no no yes 5 10 yes no no no
 /define/boundary-conditions/wall reactor-body:1 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
 /define/boundary-conditions/wall inflow_pipe 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
