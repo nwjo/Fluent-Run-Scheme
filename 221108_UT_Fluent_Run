@@ -1,7 +1,21 @@
 /file/set-tui-version "22.1"
 
-/file/read-case/"D:/UT_IMJ/tower_5m_0.3in/tower_5m_03in.msh" o
 /file/write-case-data/"D:/UT_IMJ/tower_5m_0.3in/tower_5m_03in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 0.687
+
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/tower_5m_0.3in/tower_5m_03in.cas.h5" o
+
+
+
+/mesh/replace/"D:/UT_IMJ/tower_5m_0.45in/tower_5m_045in.msh"
+/file/write-case-data/"D:/UT_IMJ/tower_5m_0.45in/tower_5m_045in.cas.h5" o
 
 /define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
 /define/boundary-conditions/mass-flow-inlet inlet liquid y n 1.546
@@ -11,5 +25,28 @@
 /solve/set/transient-controls/number-of-time-steps 30
 /solve/dual-time-iterate 30 20
 
-/file/write-case-data/"D:/UT_IMJ/tower_5m_0.3in/tower_5m_03in.cas.h5" o
+/file/write-case-data/"D:/UT_IMJ/tower_5m_0.45in/tower_5m_045in.cas.h5" o
+
+
+
+/mesh/replace/"D:/UT_IMJ/tower_5m_0.6in/tower_5m_06in.msh"
+/file/write-case-data/"D:/UT_IMJ/tower_5m_0.6in/tower_5m_06in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 2.749
+
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/tower_5m_0.6in/tower_5m_06in.cas.h5" o
+
+
+
+
+
+
+
+
 
