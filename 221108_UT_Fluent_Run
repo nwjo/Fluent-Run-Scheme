@@ -65,7 +65,7 @@
 /file/write-case-data/"D:/UT_IMJ/tower_30m_0.9in/tower_30m_09in.cas.h5" o
 
 /define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
-/define/boundary-conditions/mass-flow-inlet inlet liquid y n 2.749
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 6.185
 
 
 /solve/set/transient-controls/time-step-size 1.0
@@ -80,7 +80,7 @@
 /file/write-case-data/"D:/UT_IMJ/tower_30m_1.2in/tower_30m_12in.cas.h5" o
 
 /define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
-/define/boundary-conditions/mass-flow-inlet inlet liquid y n 2.749
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 10.995
 
 
 /solve/set/transient-controls/time-step-size 1.0
@@ -90,6 +90,99 @@
 /file/write-case-data/"D:/UT_IMJ/tower_30m_1.2in/tower_30m_12in.cas.h5" o
 
 
+
+
+/mesh/replace/"D:/UT_IMJ/ball_5m_0.5in/ball_5m_05in.msh"
+/file/write-case-data/"D:/UT_IMJ/ball_5m_0.5in/ball_5m_05in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 2.926
+
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/ball_5m_0.5in/ball_5m_05in.cas.h5" o
+
+
+
+/mesh/replace/"D:/UT_IMJ/ball_5m_0.75in/ball_5m_075in.msh"
+/file/write-case-data/"D:/UT_IMJ/ball_5m_0.75in/ball_5m_075in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 6.582
+
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/ball_5m_0.75in/ball_5m_075in.cas.h5" o
+
+
+
+
+
+/mesh/replace/"D:/UT_IMJ/ball_5m_1.5in/ball_5m_15in.msh"
+/file/write-case-data/"D:/UT_IMJ/ball_5m_1.5in/ball_5m_15in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 26.330
+
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/ball_5m_1.5in/ball_5m_15in.cas.h5" o
+
+
+
+
+
+/mesh/replace/"D:/UT_IMJ/ball_30m_1.0in/ball_30m_1in.msh"
+/file/write-case-data/"D:/UT_IMJ/ball_30m_1.0in/ball_30m_1in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 11.832
+
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/ball_30m_1.0in/ball_30m_1in.cas.h5" o
+
+
+
+
+/mesh/replace/"D:/UT_IMJ/ball_30m_1.5in/ball_30m_1_5in.msh"
+/file/write-case-data/"D:/UT_IMJ/ball_30m_1.5in/ball_30m_1_5in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 26.623
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/ball_30m_1.5in/ball_30m_1_5in.cas.h5" o
+
+
+
+
+/mesh/replace/"D:/UT_IMJ/ball_30m_2.0in/ball_30m_2in.msh"
+/file/write-case-data/"D:/UT_IMJ/ball_30m_2.0in/ball_30m_2in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 47.330
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/ball_30m_2.0in/ball_30m_2in.cas.h5" o
 
 
 
