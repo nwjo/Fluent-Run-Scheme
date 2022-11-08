@@ -45,6 +45,49 @@
 
 
 
+/mesh/replace/"D:/UT_IMJ/tower_30m_0.6in/tower_30m_06in.msh"
+/file/write-case-data/"D:/UT_IMJ/tower_30m_0.6in/tower_30m_06in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 2.749
+
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/tower_30m_0.6in/tower_30m_06in.cas.h5" o
+
+
+
+
+/mesh/replace/"D:/UT_IMJ/tower_30m_0.9in/tower_30m_09in.msh"
+/file/write-case-data/"D:/UT_IMJ/tower_30m_0.9in/tower_30m_09in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 2.749
+
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/tower_30m_0.9in/tower_30m_09in.cas.h5" o
+
+
+
+/mesh/replace/"D:/UT_IMJ/tower_30m_1.2in/tower_30m_12in.msh"
+/file/write-case-data/"D:/UT_IMJ/tower_30m_1.2in/tower_30m_12in.cas.h5" o
+
+/define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 2.749
+
+
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
+
+/file/write-case-data/"D:/UT_IMJ/tower_30m_1.2in/tower_30m_12in.cas.h5" o
 
 
 
