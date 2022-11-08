@@ -1,99 +1,15 @@
 /file/set-tui-version "22.1"
 
-/file/read-case/"D:/UT_IMJ/tower_6m_0.6in/tower_5m_03in.msh" o
-/file/write-case-data/"D:/UT_IMJ/tower_6m_0.6in/tower_5m_03in.cas.h5" o
+/file/read-case/"D:/UT_IMJ/tower_5m_0.3in/tower_5m_03in.msh" o
+/file/write-case-data/"D:/UT_IMJ/tower_5m_0.3in/tower_5m_03in.cas.h5" o
 
 /define/boundary-conditions/mass-flow-inlet inlet mixture y n 298.15 n 0 n y n n y 5 10
-
-yes yes no 1e-05 no "VolumeAve(StaticTemperature,['reactor-body'])" no 0 no yes no no yes 5 10 
-/define/boundary-conditions/pressure-outlet outlet yes no 0 no "VolumeAve(StaticTemperature,['reactor-body'])" no yes no no yes 5 10 yes no no no
-/define/boundary-conditions/wall reactor-body:1 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
-/define/boundary-conditions/wall inflow_pipe 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
-/define/boundary-conditions/wall outflow_pipe 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
-/define/models/unsteady-1st-order? yes
-/solve/report-definitions/add New_volAve_temperature volume-average
-zone-name reactor-body ,
-field temperature
-/q
-/solve/report-files/add/new_volave_temperature
-file-name ".\MP_woBaffle_40C_Temperature"
-report-defs new_volave_temperature ,
-frequency-of flow-time
-/solve/set/transient-controls/time-step-size 0.001
-/solve/set/transient-controls/number-of-time-steps 5
-/solve/dual-time-iterate 5 20
-/solve/set/equations/flow no
-/solve/set/equations/ke no
-/solve/set/transient-controls/time-step-size 30
-/solve/set/transient-controls/number-of-time-steps 2000
-/solve/dual-time-iterate 2000 20
-/file/write-case-data/"E:/Ecoset_CWDS_MP/3. Analysis/CWDS_MP_Reactor_woBaffle_InOut_OneBody_40C_Tr_insul_results.cas.h5" o
+/define/boundary-conditions/mass-flow-inlet inlet liquid y n 1.546
 
 
-/file/read-case-data/"E:/Ecoset_CWDS_MP/3. Analysis/CWDS_MP_Reactor_woBaffle_InOut_OneBody_40C.cas.h5" o
-/file/write-case-data/"E:/Ecoset_CWDS_MP/3. Analysis/CWDS_MP_Reactor_woBaffle_InOut_OneBody_60C_Tr_insul.cas.h5" o
+/solve/set/transient-controls/time-step-size 1.0
+/solve/set/transient-controls/number-of-time-steps 30
+/solve/dual-time-iterate 30 20
 
-/define/boundary-conditions/mass-flow-inlet inlet yes yes no 6.9236 no 60 no 0 no yes no no yes 5 10
-/solve/initialize/compute-defaults mass-flow-inlet inlet
-/solve/initialize/initialize-flow yes
-/solve/iterate 500
+/file/write-case-data/"D:/UT_IMJ/tower_5m_0.3in/tower_5m_03in.cas.h5" o
 
-/define/boundary-conditions/mass-flow-inlet inlet yes yes no 1e-05 no "VolumeAve(StaticTemperature,['reactor-body'])" no 0 no yes no no yes 5 10 
-/define/boundary-conditions/pressure-outlet outlet yes no 0 no "VolumeAve(StaticTemperature,['reactor-body'])" no yes no no yes 5 10 yes no no no
-/define/boundary-conditions/wall reactor-body:1 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
-/define/boundary-conditions/wall inflow_pipe 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
-/define/boundary-conditions/wall outflow_pipe 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
-/define/models/unsteady-1st-order? yes
-/solve/report-definitions/add New_volAve_temperature volume-average
-zone-name reactor-body ,
-field temperature
-/q
-/solve/report-files/add/new_volave_temperature
-file-name ".\MP_woBaffle_60C_Temperature"
-report-defs new_volave_temperature ,
-frequency-of flow-time
-/solve/set/transient-controls/time-step-size 0.001
-/solve/set/transient-controls/number-of-time-steps 5
-/solve/dual-time-iterate 5 20
-/solve/set/equations/flow no
-/solve/set/equations/ke no
-/solve/set/transient-controls/time-step-size 30
-/solve/set/transient-controls/number-of-time-steps 2000
-/solve/dual-time-iterate 2000 20
-/file/write-case-data/"E:/Ecoset_CWDS_MP/3. Analysis/CWDS_MP_Reactor_woBaffle_InOut_OneBody_60C_Tr_insul_results.cas.h5" o
-
-
-
-
-
-/file/read-case-data/"E:/Ecoset_CWDS_MP/3. Analysis/CWDS_MP_Reactor_woBaffle_InOut_OneBody_40C.cas.h5" o
-/file/write-case-data/"E:/Ecoset_CWDS_MP/3. Analysis/CWDS_MP_Reactor_woBaffle_InOut_OneBody_90C_Tr_insul.cas.h5" o
-
-/define/boundary-conditions/mass-flow-inlet inlet yes yes no 6.9236 no 90 no 0 no yes no no yes 5 10
-/solve/initialize/compute-defaults mass-flow-inlet inlet
-/solve/initialize/initialize-flow yes
-/solve/iterate 500
-
-/define/boundary-conditions/mass-flow-inlet inlet yes yes no 1e-05 no "VolumeAve(StaticTemperature,['reactor-body'])" no 0 no yes no no yes 5 10 
-/define/boundary-conditions/pressure-outlet outlet yes no 0 no "VolumeAve(StaticTemperature,['reactor-body'])" no yes no no yes 5 10 yes no no no
-/define/boundary-conditions/wall reactor-body:1 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
-/define/boundary-conditions/wall inflow_pipe 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
-/define/boundary-conditions/wall outflow_pipe 0 no 0 no yes heat-flux no 0 no no no no 0 no 0.5 no 1
-/define/models/unsteady-1st-order? yes
-/solve/report-definitions/add New_volAve_temperature volume-average
-zone-name reactor-body ,
-field temperature
-/q
-/solve/report-files/add/new_volave_temperature
-file-name ".\MP_woBaffle_90C_Temperature"
-report-defs new_volave_temperature ,
-frequency-of flow-time
-/solve/set/transient-controls/time-step-size 0.001
-/solve/set/transient-controls/number-of-time-steps 5
-/solve/dual-time-iterate 5 20
-/solve/set/equations/flow no
-/solve/set/equations/ke no
-/solve/set/transient-controls/time-step-size 30
-/solve/set/transient-controls/number-of-time-steps 2000
-/solve/dual-time-iterate 2000 20
-/file/write-case-data/"E:/Ecoset_CWDS_MP/3. Analysis/CWDS_MP_Reactor_woBaffle_InOut_OneBody_90C_Tr_insul_results.cas.h5" o
